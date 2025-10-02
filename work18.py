@@ -45,14 +45,16 @@ def drawStar(x, y):
     star.pendown()
     star.begin_fill()
     for i in range(5):
-        star.forward(50)
+        star.forward(20)
+        star.left(72)
+        star.forward(20)
         star.right(144)
     star.end_fill()
     star.hideturtle()
 
 drawStar(-70,150)
 drawStar(-150,200)
-drawStar(200,200)
+drawStar(180,200)
 drawStar(100,-00)
 
 rainbow = turtle.Turtle()
