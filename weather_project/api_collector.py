@@ -1,9 +1,9 @@
 import requests 
 import json
 import csv
-# 1. API 키를 지정합니다. 자신의 키로 변경해서 사용  
+
 apikey = "58debd485f85ee5e532f286896bfa328" 
-# 2. 날씨를 확인할 도시 지정하기 
+ 
 cities = [
     "Seoul",
     "Tokyo",
@@ -26,43 +26,49 @@ cities = [
     "Lagos",
     "Sydney",
 ] 
-# 3. API 지정 
+
 apicur = "http://api.openweathermap.org/data/2.5/weather?q={city}&APPID={key}"
 apifor = "http://api.openweathermap.org/data/2.5/forecast?q={city}&APPID={key}" 
-# 4. 켈빈 온도를 섭씨 온도로 변환하는 함수 
-
+# 켈빈 온도를 섭씨 온도로 변환하는 함수 
 k2c = lambda k: k - 273.15
 
+# current weather
 file = open("./current_weather.csv", "w", encoding="utf-8")
 for city in cities:
 
-    # 5. 도시 정보 추출하기 
-    # 6. API의 URL 구성하기 
     url = apicur.format(city=city, key=apikey) 
-    # API에 요청을 보내 데이터 추출하기 
     r = requests.get(url) 
-    # 7. 결과를 JSON 형식으로 변환하기  
     data = json.loads(r.text)
 
     temp = k2c(data["main"]["temp"])
     hum = data["main"]["humidity"]
     des = data["weather"][0]["description"]
-    file.write(f"{city}, {temp}, {hum}, {des}\n")
+    file.write(f"{city}, {temp:.1f}, {hum}, {des}\n")
 file.close()
 
+
+# forecast
 file = open("./forecast.csv", "w", encoding="utf-8")
+
+url = apifor.format(city=cities[0], key=apikey) 
+r = requests.get(url) 
+data = json.loads(r.text)
+
+file.write("City, ")
+for i in range(40):
+    file.write(f"{data['list'][i]['dt_txt']}, ")
+file.write("\n")
+
 for city in cities:
-    file.write(f"{city},")
+    
+    url = apifor.format(city=city, key=apikey) 
+    r = requests.get(url) 
+    data = json.loads(r.text)
+    
+    file.write(f"{city}, ")
     for i in range(40):
-        # 5. 도시 정보 추출하기 
-        # 6. API의 URL 구성하기 
-        url = apifor.format(city=city, key=apikey) 
-        # API에 요청을 보내 데이터 추출하기 
-        r = requests.get(url) 
-        # 7. 결과를 JSON 형식으로 변환하기  
-        data = json.loads(r.text)
         temp = k2c(data['list'][i]['main']['temp'])
         des = data['list'][i]['weather'][0]['description']
-        file.write(f"{temp} {des},")
+        file.write(f"{temp:.1f} {des}, ")
     file.write("\n")
 file.close()
