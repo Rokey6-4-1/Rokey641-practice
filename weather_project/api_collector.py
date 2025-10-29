@@ -33,7 +33,7 @@ k2c = lambda k: k - 273.15
 
 # current weather
 file = open("./current_weather.csv", "w", encoding="utf-8")
-file.write("City, Temperature, Humidity, Weather\n")
+file.write("City, Temperature, Humidity, Weather, Latitude, longitude\n")
 for city in cities:
 
     url = apicur.format(city=city, key=apikey) 
@@ -43,7 +43,9 @@ for city in cities:
     temp = k2c(data["main"]["temp"])
     hum = data["main"]["humidity"]
     des = data["weather"][0]["description"]
-    file.write(f"{city}, {temp:.1f}, {hum}, {des}\n")
+    lat = data["coord"]["lat"]
+    lon = data["coord"]["lon"]
+    file.write(f"{city}, {temp:.1f}, {hum}, {des}, {lat}, {lon}\n")
 file.close()
 
 
