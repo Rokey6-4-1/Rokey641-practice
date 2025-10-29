@@ -1,6 +1,5 @@
 import requests 
 import json
-import csv
 
 apikey = "58debd485f85ee5e532f286896bfa328" 
  
@@ -34,6 +33,7 @@ k2c = lambda k: k - 273.15
 
 # current weather
 file = open("./current_weather.csv", "w", encoding="utf-8")
+file.write("City, Temperature, Humidity, Weather\n")
 for city in cities:
 
     url = apicur.format(city=city, key=apikey) 
@@ -56,7 +56,7 @@ data = json.loads(r.text)
 
 file.write("City, ")
 for i in range(40):
-    file.write(f"{data['list'][i]['dt_txt']}, ")
+    file.write(f"{data['list'][i]['dt_txt']}, ") # UTC
 file.write("\n")
 
 for city in cities:

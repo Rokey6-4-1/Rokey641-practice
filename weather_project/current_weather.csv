@@ -1,20 +1,21 @@
-Seoul, 13.4, 52, clear sky
-Tokyo, 13.8, 60, clear sky
-Beijing, 8.9, 53, clear sky
+City, Temperature, Humidity, Weather
+Seoul, 9.8, 100, clear sky
+Tokyo, 13.6, 57, broken clouds
+Beijing, 8.9, 57, scattered clouds
 Singapore, 30.0, 69, broken clouds
-Bangkok, 27.4, 79, overcast clouds
-Mumbai, 29.0, 79, haze
+Bangkok, 27.4, 78, overcast clouds
+Mumbai, 29.0, 42, haze
 Dubai, 32.0, 48, clear sky
 London, 12.1, 91, moderate rain
-Paris, 14.7, 75, clear sky
-Berlin, 14.3, 77, broken clouds
-Madrid, 13.0, 94, mist
+Paris, 14.8, 74, clear sky
+Berlin, 14.4, 78, broken clouds
+Madrid, 13.1, 95, moderate rain
 Rome, 9.6, 95, overcast clouds
-New York, 10.4, 68, overcast clouds
-Toronto, 5.3, 78, clear sky
-Mexico City, 9.0, 71, few clouds
-Sao Paulo, 23.3, 79, clear sky
-Buenos Aires, 14.5, 66, scattered clouds
-Cairo, 28.4, 47, clear sky
-Lagos, 29.8, 68, light rain
-Sydney, 15.0, 94, overcast clouds
+New York, 10.6, 68, overcast clouds
+Toronto, 5.6, 77, clear sky
+Mexico City, 10.5, 62, few clouds
+Sao Paulo, 23.6, 78, clear sky
+Buenos Aires, 14.6, 66, scattered clouds
+Cairo, 28.4, 44, clear sky
+Lagos, 29.9, 66, light rain
+Sydney, 14.9, 94, light intensity shower rain
