@@ -1,21 +1,21 @@
-City, Temperature, Humidity, Weather
-Seoul, 9.8, 100, clear sky
-Tokyo, 13.6, 57, broken clouds
-Beijing, 8.9, 57, scattered clouds
-Singapore, 30.0, 69, broken clouds
-Bangkok, 27.4, 78, overcast clouds
-Mumbai, 29.0, 42, haze
-Dubai, 32.0, 48, clear sky
-London, 12.1, 91, moderate rain
-Paris, 14.8, 74, clear sky
-Berlin, 14.4, 78, broken clouds
-Madrid, 13.1, 95, moderate rain
-Rome, 9.6, 95, overcast clouds
-New York, 10.6, 68, overcast clouds
-Toronto, 5.6, 77, clear sky
-Mexico City, 10.5, 62, few clouds
-Sao Paulo, 23.6, 78, clear sky
-Buenos Aires, 14.6, 66, scattered clouds
-Cairo, 28.4, 44, clear sky
-Lagos, 29.9, 66, light rain
-Sydney, 14.9, 94, light intensity shower rain
+City, Temperature, Humidity, Weather, Latitude, longitude
+Seoul, 9.8, 100, clear sky, 37.5683, 126.9778
+Tokyo, 13.5, 58, broken clouds, 35.6895, 139.6917
+Beijing, 8.9, 57, scattered clouds, 39.9075, 116.3972
+Singapore, 30.0, 70, broken clouds, 1.2897, 103.8501
+Bangkok, 27.4, 78, overcast clouds, 13.75, 100.5167
+Mumbai, 29.0, 74, haze, 19.0144, 72.8479
+Dubai, 32.0, 51, clear sky, 25.2582, 55.3047
+London, 12.1, 92, light rain, 51.5085, -0.1257
+Paris, 15.0, 75, clear sky, 48.8534, 2.3488
+Berlin, 14.5, 76, broken clouds, 52.5244, 13.4105
+Madrid, 13.2, 95, mist, 40.4165, -3.7026
+Rome, 9.6, 95, moderate rain, 34.257, -85.1647
+New York, 10.8, 68, overcast clouds, 40.7143, -74.006
+Toronto, 6.3, 76, clear sky, 43.7001, -79.4163
+Mexico City, 11.0, 62, few clouds, 19.4285, -99.1277
+Sao Paulo, 23.7, 78, clear sky, -23.5475, -46.6361
+Buenos Aires, 15.0, 66, scattered clouds, -34.6132, -58.3772
+Cairo, 28.4, 44, clear sky, 30.0626, 31.2497
+Lagos, 29.9, 66, light rain, 6.5833, 3.75
+Sydney, 14.9, 94, broken clouds, -33.8679, 151.2073
