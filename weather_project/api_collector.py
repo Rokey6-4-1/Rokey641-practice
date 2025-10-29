@@ -33,7 +33,7 @@ apifor = "http://api.openweathermap.org/data/2.5/forecast?q={city}&APPID={key}"
 
 k2c = lambda k: k - 273.15
 
-file = open("./current_weather_data.csv", "w", encoding="utf-8")
+file = open("./current_weather.csv", "w", encoding="utf-8")
 for city in cities:
 
     # 5. 도시 정보 추출하기 
@@ -50,13 +50,19 @@ for city in cities:
     file.write(f"{city}, {temp}, {hum}, {des}\n")
 file.close()
 
+file = open("./forecast.csv", "w", encoding="utf-8")
 for city in cities:
-
-    # 5. 도시 정보 추출하기 
-    # 6. API의 URL 구성하기 
-    url = apifor.format(city=city, key=apikey) 
-    # API에 요청을 보내 데이터 추출하기 
-    r = requests.get(url) 
-    # 7. 결과를 JSON 형식으로 변환하기  
-    data = json.loads(r.text)
-    print(data['list']['dt'])
+    file.write(f"{city},")
+    for i in range(40):
+        # 5. 도시 정보 추출하기 
+        # 6. API의 URL 구성하기 
+        url = apifor.format(city=city, key=apikey) 
+        # API에 요청을 보내 데이터 추출하기 
+        r = requests.get(url) 
+        # 7. 결과를 JSON 형식으로 변환하기  
+        data = json.loads(r.text)
+        temp = k2c(data['list'][i]['main']['temp'])
+        des = data['list'][i]['weather'][0]['description']
+        file.write(f"{temp} {des},")
+    file.write("\n")
+file.close()
