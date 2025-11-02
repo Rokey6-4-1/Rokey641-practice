@@ -1,102 +1,142 @@
 [
     {
-        "City":"Seoul",
-        "Latitude":37.5683,
-        "longitude":126.9778
-    },
-    {
-        "City":"Tokyo",
-        "Latitude":35.6895,
-        "longitude":139.6917
-    },
-    {
-        "City":"Beijing",
-        "Latitude":39.9075,
-        "longitude":116.3972
-    },
-    {
-        "City":"Singapore",
-        "Latitude":1.2897,
-        "longitude":103.8501
-    },
-    {
         "City":"Bangkok",
+        "Weather":" overcast clouds",
+        "Temperature":27.4,
         "Latitude":13.75,
         "longitude":100.5167
     },
     {
-        "City":"Mumbai",
-        "Latitude":19.0144,
-        "longitude":72.8479
-    },
-    {
-        "City":"Dubai",
-        "Latitude":25.2582,
-        "longitude":55.3047
-    },
-    {
-        "City":"London",
-        "Latitude":51.5085,
-        "longitude":-0.1257
-    },
-    {
-        "City":"Paris",
-        "Latitude":48.8534,
-        "longitude":2.3488
+        "City":"Beijing",
+        "Weather":" scattered clouds",
+        "Temperature":8.9,
+        "Latitude":39.9075,
+        "longitude":116.3972
     },
     {
         "City":"Berlin",
+        "Weather":" broken clouds",
+        "Temperature":14.5,
         "Latitude":52.5244,
         "longitude":13.4105
     },
     {
-        "City":"Madrid",
-        "Latitude":40.4165,
-        "longitude":-3.7026
-    },
-    {
-        "City":"Rome",
-        "Latitude":34.257,
-        "longitude":-85.1647
-    },
-    {
-        "City":"New York",
-        "Latitude":40.7143,
-        "longitude":-74.006
-    },
-    {
-        "City":"Toronto",
-        "Latitude":43.7001,
-        "longitude":-79.4163
-    },
-    {
-        "City":"Mexico City",
-        "Latitude":19.4285,
-        "longitude":-99.1277
-    },
-    {
-        "City":"Sao Paulo",
-        "Latitude":-23.5475,
-        "longitude":-46.6361
-    },
-    {
         "City":"Buenos Aires",
+        "Weather":" scattered clouds",
+        "Temperature":15.0,
         "Latitude":-34.6132,
         "longitude":-58.3772
     },
     {
         "City":"Cairo",
+        "Weather":" clear sky",
+        "Temperature":28.4,
         "Latitude":30.0626,
         "longitude":31.2497
     },
     {
+        "City":"Dubai",
+        "Weather":" clear sky",
+        "Temperature":32.0,
+        "Latitude":25.2582,
+        "longitude":55.3047
+    },
+    {
         "City":"Lagos",
+        "Weather":" light rain",
+        "Temperature":29.9,
         "Latitude":6.5833,
         "longitude":3.75
     },
     {
+        "City":"London",
+        "Weather":" light rain",
+        "Temperature":12.1,
+        "Latitude":51.5085,
+        "longitude":-0.1257
+    },
+    {
+        "City":"Madrid",
+        "Weather":" mist",
+        "Temperature":13.2,
+        "Latitude":40.4165,
+        "longitude":-3.7026
+    },
+    {
+        "City":"Mexico City",
+        "Weather":" few clouds",
+        "Temperature":11.0,
+        "Latitude":19.4285,
+        "longitude":-99.1277
+    },
+    {
+        "City":"Mumbai",
+        "Weather":" haze",
+        "Temperature":29.0,
+        "Latitude":19.0144,
+        "longitude":72.8479
+    },
+    {
+        "City":"New York",
+        "Weather":" overcast clouds",
+        "Temperature":10.8,
+        "Latitude":40.7143,
+        "longitude":-74.006
+    },
+    {
+        "City":"Paris",
+        "Weather":" clear sky",
+        "Temperature":15.0,
+        "Latitude":48.8534,
+        "longitude":2.3488
+    },
+    {
+        "City":"Rome",
+        "Weather":" moderate rain",
+        "Temperature":9.6,
+        "Latitude":34.257,
+        "longitude":-85.1647
+    },
+    {
+        "City":"Sao Paulo",
+        "Weather":" clear sky",
+        "Temperature":23.7,
+        "Latitude":-23.5475,
+        "longitude":-46.6361
+    },
+    {
+        "City":"Seoul",
+        "Weather":" clear sky",
+        "Temperature":9.8,
+        "Latitude":37.5683,
+        "longitude":126.9778
+    },
+    {
+        "City":"Singapore",
+        "Weather":" broken clouds",
+        "Temperature":30.0,
+        "Latitude":1.2897,
+        "longitude":103.8501
+    },
+    {
         "City":"Sydney",
+        "Weather":" broken clouds",
+        "Temperature":14.9,
         "Latitude":-33.8679,
         "longitude":151.2073
+    },
+    {
+        "City":"Tokyo",
+        "Weather":" broken clouds",
+        "Temperature":13.5,
+        "Latitude":35.6895,
+        "longitude":139.6917
+    },
+    {
+        "City":"Toronto",
+        "Weather":" clear sky",
+        "Temperature":6.3,
+        "Latitude":43.7001,
+        "longitude":-79.4163
     }
 ]
