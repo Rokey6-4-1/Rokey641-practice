@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세계 날씨 시각화 대시보드</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-cloud-sun"></i> 세계 날씨 시각화</h1>
+            <p>실시간 20개 도시 날씨 정보</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container main-container">
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card hot">
+                <i class="fas fa-temperature-high"></i>
+                <div class="stat-info">
+                    <h3>가장 더운 도시</h3>
+                    <p id="hottestCity">로딩 중...</p>
+                    <span id="hottestTemp" class="temp">--°C</span>
+                </div>
+            </div>
+            
+            <div class="stat-card cold">
+                <i class="fas fa-temperature-low"></i>
+                <div class="stat-info">
+                    <h3>가장 추운 도시</h3>
+                    <p id="coldestCity">로딩 중...</p>
+                    <span id="coldestTemp" class="temp">--°C</span>
+                </div>
+            </div>
+            
+            <div class="stat-card avg">
+                <i class="fas fa-chart-line"></i>
+                <div class="stat-info">
+                    <h3>평균 온도</h3>
+                    <p>전체 도시</p>
+                    <span id="avgTemp" class="temp">--°C</span>
+                </div>
+            </div>
+            
+            <div class="stat-card count">
+                <i class="fas fa-city"></i>
+                <div class="stat-info">
+                    <h3>모니터링 도시</h3>
+                    <p>전 세계</p>
+                    <span id="cityCount" class="temp">20개</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Map Section -->
+            <div class="panel map-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-map-marked-alt"></i> 세계 지도</h2>
+                    <div class="legend">
+                        <span class="legend-item"><span class="dot" style="background: #8b00ff;"></span> &lt; 0°C</span>
+                        <span class="legend-item"><span class="dot" style="background: #0066ff;"></span> 0-10°C</span>
+                        <span class="legend-item"><span class="dot" style="background: #00cc66;"></span> 10-20°C</span>
+                        <span class="legend-item"><span class="dot" style="background: #ffaa00;"></span> 20-30°C</span>
+                        <span class="legend-item"><span class="dot" style="background: #ff0000;"></span> &gt; 30°C</span>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+
+            <!-- Info Panel -->
+            <div class="panel info-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-info-circle"></i> 도시 정보</h2>
+                </div>
+                <div id="cityInfo" class="city-info">
+                    <div class="placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>지도에서 도시를 선택하세요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="panel chart-panel">
+            <div class="panel-header">
+                <h2><i class="fas fa-chart-area"></i> 온도 추이 그래프</h2>
+                <div class="chart-period-buttons">
+                    <button class="period-btn active" data-type="avg"><i class="fas fa-chart-line"></i> 평균기온</button>
+                    <button class="period-btn" data-type="max"><i class="fas fa-temperature-high"></i> 최고기온</button>
+                    <button class="period-btn" data-type="min"><i class="fas fa-temperature-low"></i> 최저기온</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="temperatureChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Weather Visualization Dashboard | Data updates every 3 hours</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+</body>
+</html>
