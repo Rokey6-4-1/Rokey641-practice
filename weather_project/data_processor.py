@@ -7,20 +7,27 @@ import json
 path1 = r"C:\rokey\Rokey641-practice\weather_project\current_weather.csv"
 df1 = pd.read_csv(path1)
 # print(df1)
-data = {'City' : [], 'Latitude' : [], 'longitude' : []}
+data = {'City' : [], 'Weather' : [], 'Temperature' : [] ,'Latitude' : [], 'longitude' : []}
 for i in range(len(df1)):
     city = df1.iloc[i]["City"]
+    city_Weather = df1.iloc[i][" Weather"]
+    city_Temperature = df1.iloc[i][" Temperature"]
     city_Latitude = df1.iloc[i][" Latitude"]
     city_longitude = df1.iloc[i][" longitude"]
-    
-    # 도시, 위도, 경도를 data 딕셔너리에 추가 
+
+
+    # 도시, 날씨, 온도, 위도, 경도를 data 딕셔너리에 추가 
     data['City'].append(city)
+    data['Weather'].append(city_Weather)
+    data['Temperature'].append(city_Temperature)
     data['Latitude'].append(city_Latitude)
     data['longitude'].append(city_longitude)
+ 
 
 # 데이터프레임 생성
 pd_Ll = pd.DataFrame(data)
-# print(pd_Ll)
+pd_Ll.sort_values(by=['City'], inplace=True)
+print(pd_Ll)
 
 # 도시, 위도, 경도 데이터프레임을 .json 파일로 변경 후 저장
 path1 = r"C:\rokey\Rokey641-practice\weather_project\pd_li.json"
